@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="BrandGravity - We Build Brands That Dominate Digital. Websites, performance ads, and social media that drive real growth.">
+    <title>BrandGravity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Splitting.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Intro Loader -->
+    <div id="intro-loader" class="intro-loader-container">
+        <div class="intro-content">
+            <h1 class="intro-title" data-splitting>BrandGravity</h1>
+            <div class="intro-dot">
+                <div class="intro-dot-inner">
+                    <svg class="intro-dot-wave background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+                        <path
+                            d="M799.09 90s11.04 0 0 0c-80.714 0-79.621-90-200-90-120.377 0-118.607 90-200 90-81.391 0-81.215-90-200-90C80.308 0 78.68 89.29-.91 90c-6.946.062 0 0 0 0v510h800V90z" />
+                    </svg>
+                    <svg class="intro-dot-wave foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+                        <path
+                            d="M799.09 90s11.04 0 0 0c-80.714 0-79.621-90-200-90-120.377 0-118.607 90-200 90-81.391 0-81.215-90-200-90C80.308 0 78.68 89.29-.91 90c-6.946.062 0 0 0 0v510h800V90z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor Follower -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Background Animation (Interactive Ripple) -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="" class="brand-logo">
+                Brand<span>Gravity</span>
+            </a>
+            <nav class="nav-links" style="display: none;">
+                <a href="#services">Services</a>
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#process">Process</a>
+            </nav>
+            <div class="nav-right" style="display: flex; align-items: center; gap: 2rem;">
+                <a href="#contact" class="btn-primary sm" data-magnetic>Let's Talk</a>
+                <div class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Full Screen Menu Overlay -->
+    <div class="full-screen-menu" id="full-screen-menu">
+        <div class="menu-close-btn" id="menu-close-btn">
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="menu-center-nav">
+            <a href="#work" class="menu-link">Our Work</a>
+            <a href="#services" class="menu-link">Services</a>
+            <a href="#about" class="menu-link">About</a>
+            <a href="#blog" class="menu-link">Blog</a>
+            <a href="#contact" class="menu-link">Contact</a>
+        </nav>
+
+        <div class="menu-bottom-row">
+            <div class="menu-bottom-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Personal Data Processing & Protection Policy</a>
+            </div>
+
+            <a href="mailto:hello@brandgravity.com" class="menu-email">hello@brandgravity.com</a>
+
+            <div class="menu-socials">
+                <a href="#">IN</a>
+                <a href="#">IG</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Wrapper (for wipe effect) -->
+    <main class="main-wrapper">
+
+        <!-- Hero Section -->
+        <section class="hero wipe-section dark-section" id="hero">
+            <div class="container hero-content">
+                <div class="hero-left reveal-fade">
+                    <p class="hero-subtext">Creative Agency<br>Focusing on Digital<br>Growth & Innovation.</p>
+                </div>
+                <div class="hero-center">
+                    <h1 class="hero-title">
+                        <span class="reveal-text">We build</span>
+                        <span class="reveal-text indent-1 creative-text">Brands</span>
+                        <span class="reveal-text indent-2">That dominate</span>
+                        <span class="reveal-text indent-3">Digital.</span>
+                    </h1>
+                </div>
+                <div class="hero-bottom reveal-fade" style="transition-delay: 0.3s;">
+                    <a href="#work" class="btn-oval" data-magnetic>
+                        <span class="btn-text">View Projects</span>
+                        <span class="btn-bg"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Logos (Marquee) -->
+        <section class="client-logos">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <!-- Repeated for smooth infinite scroll -->
+                    <span>STELLAR</span>
+                    <span>NEXUS LABS</span>
+                    <span>AURA SYSTEMS</span>
+                    <span>VERTEX GROUP</span>
+                    <span>LUMINA TECH</span>
+                    <span>OMNICORE</span>
+
+                    <!-- repeat for smooth scroll -->
+                    <span>STELLAR</span>
+                    <span>NEXUS LABS</span>
+                    <span>AURA SYSTEMS</span>
+                    <span>VERTEX GROUP</span>
+                    <span>LUMINA TECH</span>
+                    <span>OMNICORE</span>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section-padding" id="services">
+            <div class="container">
+                <div class="section-header reveal-fade">
+                    <h2 class="section-title">Our Expertise <span class="dot">.</span></h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card reveal-fade">
+                        <div class="service-icon">01</div>
+                        <h3>Website Development</h3>
+                        <p>High-performance, ultra-premium websites engineered for conversion and visual excellence.</p>
+                    </div>
+                    <div class="service-card reveal-fade" style="transition-delay: 0.1s;">
+                        <div class="service-icon">02</div>
+                        <h3>Social Media Management</h3>
+                        <p>Building dominant social presences that engage audiences and cultivate brand loyalty.</p>
+                    </div>
+                    <div class="service-card reveal-fade" style="transition-delay: 0.2s;">
+                        <div class="service-icon">03</div>
+                        <h3>Performance Marketing</h3>
+                        <p>Data-driven ad campaigns designed to maximize ROI and scale your revenue aggressively.</p>
+                    </div>
+                    <div class="service-card reveal-fade">
+                        <div class="service-icon">04</div>
+                        <h3>Branding & Identity</h3>
+                        <p>Crafting powerful visual identities that resonate and position you as a market leader.</p>
+                    </div>
+                    <div class="service-card reveal-fade" style="transition-delay: 0.1s;">
+                        <div class="service-icon">05</div>
+                        <h3>SEO Growth</h3>
+                        <p>Strategic search dominance to capture high-intent organic traffic sustainably.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work / Portfolio Section -->
+        <section class="work section-padding wipe-section light-section" id="work">
+            <div class="container">
+                <div class="section-header top-row reveal-fade">
+                    <h2 class="section-title">Selected Work</h2>
+                    <a href="#" class="view-all-link">View All Projects &rarr;</a>
+                </div>
+
+                <div class="portfolio-list">
+                    <!-- Portfolio List Items -->
+                    <div class="portfolio-row" data-img="assets/portfolio_1.png">
+                        <div class="row-info">
+                            <span class="row-cat">Web Development</span>
+                            <h3 class="row-title">Aethel Luxury</h3>
+                        </div>
+                        <div class="row-arrow">&rarr;</div>
+                    </div>
+
+                    <div class="portfolio-row" data-img="assets/portfolio_2.png">
+                        <div class="row-info">
+                            <span class="row-cat">Branding</span>
+                            <h3 class="row-title">Nova Tech</h3>
+                        </div>
+                        <div class="row-arrow">&rarr;</div>
+                    </div>
+
+                    <div class="portfolio-row" data-img="assets/portfolio_3.png">
+                        <div class="row-info">
+                            <span class="row-cat">E-Commerce</span>
+                            <h3 class="row-title">Lumina Skincare</h3>
+                        </div>
+                        <div class="row-arrow">&rarr;</div>
+                    </div>
+
+                    <div class="portfolio-row" data-img="assets/portfolio_4.png">
+                        <div class="row-info">
+                            <span class="row-cat">Marketing</span>
+                            <h3 class="row-title">Vertex Finance</h3>
+                        </div>
+                        <div class="row-arrow">&rarr;</div>
+                    </div>
+                </div>
+
+                <!-- Floating Image container for hover effect -->
+                <div class="portfolio-hover-img" id="portfolio-hover-img">
+                    <img src="" alt="Project Preview">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section-padding" id="about">
+            <div class="container">
+                <div class="about-content reveal-fade">
+                    <h2 class="about-statement">
+                        We don't just build websites.<br>
+                        <span class="text-gradient">We engineer digital growth.</span>
+                    </h2>
+                    <p class="about-desc">
+                        BrandGravity is a premier digital agency partnering with ambitious brands. Our philosophy is
+                        simple:
+                        beautiful design means nothing without measurable results. We blend cutting-edge aesthetics with
+                        data-driven strategy to scale businesses to their absolute peak.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process section-padding" id="process">
+            <div class="container">
+                <div class="section-header reveal-fade">
+                    <h2 class="section-title">Our Methodology <span class="dot">.</span></h2>
+                </div>
+                <div class="process-grid">
+                    <div class="process-step reveal-fade">
+                        <div class="step-num">01</div>
+                        <h3 class="step-title">Discover</h3>
+                        <p>We dive deep into your brand, audience, and market to find the untapped opportunities.</p>
+                    </div>
+                    <div class="process-step reveal-fade" style="transition-delay: 0.1s;">
+                        <div class="step-num">02</div>
+                        <h3 class="step-title">Strategy</h3>
+                        <p>Formulating a bulletproof roadmap integrating design, tech, and marketing focused on ROI.</p>
+                    </div>
+                    <div class="process-step reveal-fade" style="transition-delay: 0.2s;">
+                        <div class="step-num">03</div>
+                        <h3 class="step-title">Execute</h3>
+                        <p>Deploying high-end creative and technical solutions with uncompromising precision.</p>
+                    </div>
+                    <div class="process-step reveal-fade" style="transition-delay: 0.3s;">
+                        <div class="step-num">04</div>
+                        <h3 class="step-title">Scale</h3>
+                        <p>Iterative optimization and aggressive marketing to transform traffic into sustained revenue.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="testimonial section-padding transition-section">
+            <div class="container">
+                <div class="testimonial-slider reveal-fade">
+                    <div class="quote-icon">"</div>
+                    <h3 class="quote-text">BrandGravity completely transformed our online presence. Our conversion rates
+                        doubled in the first three months, and the new brand identity perfectly captures our vision.
+                    </h3>
+                    <div class="quote-author">
+                        <p class="author-name">Sumit Jha</p>
+                        <p class="author-role">CMO at Nova Tech</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta section-padding" id="contact">
+            <div class="container reveal-fade">
+                <div class="cta-box">
+                    <div class="cta-glow"></div>
+                    <h2 class="cta-title">Ready to scale your brand?</h2>
+                    <p class="cta-sub">Let's build something exceptional together.</p>
+                    <a href="mailto:hello@brandgravity.com" class="btn-primary large" data-magnetic>Book Free
+                        Consultation</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Footer -->
+    <footer class="footer section-padding dark-section">
+        <div class="container text-center">
+
+            <div class="footer-vision reveal-fade">
+                <h2 class="vision-title">Our Vision</h2>
+                <p class="vision-text">
+                    To elevate brands into icons of desire and performance, remembered for their distinction. Embodying
+                    the essence of a premium digital growth agency that builds timeless impact.
+                </p>
+            </div>
+
+            <h1 class="footer-massive-text reveal-fade" style="transition-delay: 0.1s;">BRANDGRAVITY</h1>
+
+            <div class="footer-contact-info reveal-fade" style="transition-delay: 0.2s;">
+                <h3 class="contact-title">Contact Info</h3>
+                <div class="contact-methods">
+                    <a href="mailto:hello@brandgravity.com" class="contact-link">
+                        <span class="icon">&#9993;</span> hello@brandgravity.com
+                    </a>
+                    <a href="tel:9579725440" class="contact-link">
+                        <span class="icon">&#128222;</span> 9579725440
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <p class="copyright">Copyright © BrandGravity. All Rights Reserved.</p>
+                <div class="footer-socials">
+                    <a href="#">IG</a>
+                    <a href="#">IN</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

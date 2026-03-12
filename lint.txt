@@ -1,0 +1,30 @@
+﻿
+C:\Users\Keshav\OneDrive\Desktop\Brandgravity\legacy\script.js
+  4:5  error  'Splitting' is not defined  no-undef
+
+C:\Users\Keshav\OneDrive\Desktop\Brandgravity\src\components\InteractiveBackground.jsx
+  25:9  warning  Compilation Skipped: Inline `class` declarations are not supported
+
+Move class declarations outside of components/hooks.
+
+  23 |         resize();
+  24 |
+> 25 |         class Ripple {
+     |         ^^^^^^^^^^^^^^
+> 26 |             constructor(x, y) {
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |                 this.x = x;
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 56 |             }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 57 |         }
+     | ^^^^^^^^^^ Inline `class` declarations are not supported
+  58 |
+  59 |         let lastTime = 0;
+  60 |         const onMouseMove = (e) => {
+
+  react-hooks/unsupported-syntax
+
+Γ£û 2 problems (1 error, 1 warning)
+
